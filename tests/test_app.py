@@ -1,12 +1,4 @@
-from fastapi.testclient import TestClient
-
-from src.app import app
-
-
-client = TestClient(app)
-
-
-def test_unregister_participant_from_activity():
+def test_unregister_participant_from_activity(client):
     activity_name = "Chess Club"
     email = "michael@mergington.edu"
 
